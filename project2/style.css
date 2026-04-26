@@ -1,11 +1,12 @@
 figure {
   width: 100%;
-  max-width: 600px;
-  height: 350px;             
-  margin: 20px auto;
+  max-width: 650px;
+  height: 350px;              
+  margin: 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #fff;
 }
 
 figure img {
