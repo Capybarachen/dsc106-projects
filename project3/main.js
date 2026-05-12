@@ -58,9 +58,12 @@ Promise.all([
     .attr("step", 1)
     .property("value", selectedYear);
 
-  const values = data.map(d => d.od550aer).filter(Number.isFinite);
-  const color = d3.scaleThreshold()
-    .domain([0.05, 0.1, 0.15, 0.2])
+  const values = filteredData
+    .map(d => d.aerosol)
+    .filter(d => d != null);
+
+  const color = d3.scaleQuantile()
+    .domain(values)
     .range([
         "#38f9ff",
         "#00e676",
