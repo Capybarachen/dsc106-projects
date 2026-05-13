@@ -222,12 +222,12 @@ select {
     border-radius: 3px;
 }
 
-.c1 { background: #ffffcc; }
-.c2 { background: #ffeda0; }
+.c1 { background: #ffffb2; }
+.c2 { background: #fed976; }
 .c3 { background: #feb24c; }
-.c4 { background: #fc4e2a; }
-.c5 { background: #e31a1c; }
-.c6 { background: #b10026; }
+.c4 { background: #fd8d3c; }
+.c5 { background: #f03b20; }
+.c6 { background: #bd0026; }
 
 .side-panel {
   display: grid;
