@@ -113,7 +113,7 @@
     </section>
 
     <section class="text-section">
-      <h2>Overview</h2>
+      <h2>Design Decisions</h2>
       <div class="text-card">
         <p>
           This visualization uses CMIP6 aerosol optical depth at 550 nm (<code>od550aer</code>)
@@ -121,8 +121,11 @@
           airborne particles such as dust, smoke, and pollution block sunlight.
         </p>
         <p>
-          Use the year slider and month slider to move through time. Hover over a country to see
-          its exact value, or select a country to view its long-term annual trend.
+          Our project focuses on the visualization of geological data on aerosol optical depth around the world from 1950 to 2014. Since it is across a world scale, we chose a world map as a visual encoding and allows the views to select their desired time on year and month scale to see the changes across year and month. We use warm-toned yellow and red colors to show the levels. We used red to resemble higher values while the color also resembles pollution, warmth, and intensity. We considered alternatives ways of binning the color scale, for instance, quantile and log transform than binning. Since the data is left-skewed, most countries fall into the most yellow bin. We had to try different ways to binning the colors so that the readers can see a visual difference among those countries with low-concentration as well as a significant sign for those countries with high-concentration. Our slide bars on year and month allows the users to explore data across time interactively and can easily compare between different temporal graphs of the world. We also included a small trend line chart for each country at the side to show the changes across all data on yearly scale so that the user can have a more idea of the annual increasing trend and where the world map represents on a upward trend. 
+        </p>
+
+        <p>
+          Throughout the process of making the website, we planned out our graphs and display of the website. We first cleaned and organized the aerosol dataset. We also connected the data to world.geojson so each country’s aerosol values could appear on the world map. Then we adjusted the time range and made them into bins. And kept the timeframe from 1950-2014. After data was ready, we built a choropleth world map where each country’s color represents aerosol optical depth. Then we added interactive features and more specific information. The hardest part- and most-time consuming parts are data cleaning and preparing the data. The work load is more in the people who are doing the data cleaning and structuring part. Overall, around 30 hours in total
         </p>
       </div>
     </section>
