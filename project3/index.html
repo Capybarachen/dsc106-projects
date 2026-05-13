@@ -50,10 +50,39 @@
             <h2>World map</h2>
             <p>Average aerosol optical depth by country for the selected month and year.</p>
           </div>
-          <div class="legend" aria-label="color legend">
-            <span>Low</span>
-            <div class="legend-gradient"></div>
-            <span>High</span>
+          
+          <div class="legend">
+          
+            <div class="legend-item">
+              <span class="legend-color c1"></span>
+              <span>&lt; 0.08</span>
+            </div>
+          
+            <div class="legend-item">
+              <span class="legend-color c2"></span>
+              <span>0.08–0.15</span>
+            </div>
+          
+            <div class="legend-item">
+              <span class="legend-color c3"></span>
+              <span>0.15–0.20</span>
+            </div>
+          
+            <div class="legend-item">
+              <span class="legend-color c4"></span>
+              <span>0.20–0.46</span>
+            </div>
+          
+            <div class="legend-item">
+              <span class="legend-color c5"></span>
+              <span>0.46–0.65</span>
+            </div>
+          
+            <div class="legend-item">
+              <span class="legend-color c6"></span>
+              <span>&gt; 0.65</span>
+            </div>
+          
           </div>
         </div>
         <svg id="map" viewBox="0 0 1200 620" role="img" aria-label="choropleth map of aerosol optical depth"></svg>
