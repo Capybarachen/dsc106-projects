@@ -63,7 +63,7 @@ Promise.all([
       .filter(Number.isFinite);
   
   const color = d3.scaleThreshold()
-    .domain([0.08, 0.15, 0.2, 0.46, 0.65])
+    .domain([0.08, 0.16, 0.24, 0.32, 0.40])
     .range(d3.schemeYlOrRd[6]);
 
   // year -> month -> country -> mean AOD
