@@ -58,19 +58,38 @@ Promise.all([
     .attr("step", 1)
     .property("value", selectedYear);
 
-  const values = filteredData
-    .map(d => d.aerosol)
-    .filter(d => d != null);
+function updateMap() {
 
-  const color = d3.scaleQuantile()
-    .domain(values)
-    .range([
-        "#38f9ff",
-        "#00e676",
-        "#ffee00",
-        "#ff9800",
-        "#ff0000"
-    ]);
+    const filteredData = data.filter(d =>
+        d.year === selectedYear &&
+        d.month === selectedMonth
+    );
+
+    const values = filteredData
+        .map(d => d.aerosol)
+        .filter(d => d != null);
+
+    const color = d3.scaleQuantile()
+        .domain(values)
+        .range([
+            "#38f9ff",
+            "#00e676",
+            "#ffee00",
+            "#ff9800",
+            "#ff0000"
+        ]);
+
+    svg.selectAll("path")
+        .attr("fill", d => {
+
+            const value = ...
+
+            return value != null
+                ? color(value)
+                : "#111827";
+        });
+
+}  
 
   // year -> month -> country -> mean AOD
   const dataByYearMonthCountry = d3.rollup(
