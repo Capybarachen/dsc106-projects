@@ -59,18 +59,18 @@ Promise.all([
     .property("value", selectedYear);
 
   const values = data
-    .map(d => d.od550aer)
-    .filter(Number.isFinite);
+      .map(d => d.od550aer)
+      .filter(Number.isFinite);
   
   const color = d3.scaleQuantile()
-    .domain(values)
-    .range([
-      "#67e8f9",
-      "#22c55e",
-      "#facc15",
-      "#f97316",
-      "#dc2626"
-    ]);
+      .domain(values)
+      .range([
+          "#ffffcc",
+          "#ffeda0",
+          "#feb24c",
+          "#f03b20",
+          "#bd0026"
+      ]);
 
   // year -> month -> country -> mean AOD
   const dataByYearMonthCountry = d3.rollup(
