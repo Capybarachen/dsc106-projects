@@ -171,11 +171,30 @@ Promise.all([
   }
 
   function updateSelectedCountry() {
-    const value = getCountryValue(selectedCountry, selectedYear, selectedMonth);
-    selectedCountryLabel.text(selectedCountry);
-    selectedValueLabel.text(
-      `${monthNames[selectedMonth - 1]} ${selectedYear}: ${Number.isFinite(value) ? formatValue(value) : "No data"}`
+  
+    const value = getCountryValue(
+      selectedCountry,
+      selectedYear,
+      selectedMonth
     );
+  
+    selectedCountryLabel.text(selectedCountry);
+  
+    selectedValueLabel.text(
+      `${monthNames[selectedMonth - 1]} ${selectedYear}: ${
+        Number.isFinite(value)
+          ? formatValue(value)
+          : "No data"
+      }`
+    );
+  
+    d3.select("#reading-dot")
+      .style(
+        "background",
+        Number.isFinite(value)
+          ? color(value)
+          : "#374151"
+      );
   }
 
   function updateTopList() {
