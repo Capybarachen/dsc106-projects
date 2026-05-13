@@ -201,12 +201,33 @@ select {
   white-space: nowrap;
 }
 
-.legend-gradient {
-  width: 160px;
-  height: 12px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #ffffcc, #fd8d3c, #bd0026);
+.legend {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #cbd5e1;
+    font-size: 0.8rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.c1 { background: #ffffcc; }
+.c2 { background: #ffeda0; }
+.c3 { background: #feb24c; }
+.c4 { background: #fc4e2a; }
+.c5 { background: #e31a1c; }
+.c6 { background: #b10026; }
 
 .side-panel {
   display: grid;
