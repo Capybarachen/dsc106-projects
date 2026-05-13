@@ -400,3 +400,18 @@ code {
   stroke-dasharray: 4 4;
   pointer-events: none;
 }
+
+.country-reading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+#reading-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: #374151;
+    flex-shrink: 0;
+}
